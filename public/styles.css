@@ -23,6 +23,8 @@ header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  display: inline-block;
+  margin-right:30px;
 }
 
 footer {
@@ -110,3 +112,27 @@ form.create-note button {
   font-weight:bold;
 }
 
+.container{
+  text-align:center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.about{
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  margin: 16px;
+  z-index: 1;
+}
+
+.link{
+  display:inline-block;
+  margin: 0px 15px;
+  color:white;
+}
+
+.link:hover{
+  color:grey;
+}

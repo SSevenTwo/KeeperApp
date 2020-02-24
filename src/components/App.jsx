@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import About from "./About";
+import Create from "./Create";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
 const [notes, setNotes] = useState([]);
@@ -23,14 +24,16 @@ function deleteNote(id){
 }
 
   return (
+    <Router>
     <div>
       <Header />
-      <CreateArea addNote={addNote}/>
-      {notes.map((note,index)=>(
-        <Note key={index} id={index} title={note.title} content={note.content} deleteItem={deleteNote} />
-      ))}
+      <Switch>
+        <Route path="/" exact render={props=><Create {...props} notes={notes} addNote={addNote} deleteNote={deleteNote}/>}/>
+        <Route path="/about" component={About}/>
+      </Switch>
       <Footer />
     </div>
+    </Router>
   );
 }
 
