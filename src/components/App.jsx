@@ -27,7 +27,7 @@ function deleteNote(id){
       <Header />
       <CreateArea addNote={addNote}/>
       {notes.map((note,index)=>(
-          <Note key={index} id={index} title={note.title} content={note.content} deleteItem={deleteNote} />
+        <Note key={index} id={index} title={note.title} content={note.content} deleteItem={deleteNote} />
       ))}
       <Footer />
     </div>
